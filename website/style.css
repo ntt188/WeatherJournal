@@ -1,0 +1,135 @@
+:root {
+    --back-color: #1f2833;
+    --back-app-color: rgba(11, 12, 16,0.8);
+    --text-color: #C5C6C7;
+    --text-main-color: #66FCF1;
+    --text-sub-color: #45A29E;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.main {
+    height: 100vh;
+    background-color: var(--back-color);
+}
+
+.app {
+    width: 700px;
+    height: 700px;
+    background-color: var(--back-app-color);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    border-radius: 10px;
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 20% 60% 20%;
+    grid-template-areas: "title" "form" "entry";
+}
+
+header {
+    grid-area: title;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+header h1 {
+    color: var(--text-main-color);
+}
+
+form {
+    grid-area: form;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 25% 50% 25%;
+    grid-template-areas: "zip" "feel" "generate";
+}
+
+.zipbox {
+    grid-area: zip;
+    display: flex;
+    align-items: center;
+}
+
+.textzip {
+    width: 30%;
+}
+
+.textzip label,
+.textfeel label {
+    margin-left: 10px;
+    color: var(--text-sub-color);
+}
+
+#zip {
+    padding: 10px;
+    border-radius: 5px;
+    border: 3px solid var(--text-main-color);
+}
+
+.feelbox {
+    grid-area: feel;
+    display: flex;
+    align-items: center;
+}
+
+.textfeel {
+    width: 30%;
+}
+
+
+#feelings {
+    padding: 10px;
+    resize: none;
+    border-radius: 5px;
+    border: 3px solid var(--text-main-color);
+}
+
+.generatebox {
+    grid-area: generate;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#generate {
+    padding: 20px 30px;
+    border-radius: 10px;
+    font-size: 16px;
+    border: 2px solid var(--text-main-color);
+    color: var(--text-main-color);
+    background-color: var(--back-color);
+}
+
+#generate:hover {
+    color: var(--back-color);
+    background-color: var(--text-main-color);
+}
+
+.entry {
+    grid-area: entry;
+    background-color: var(--text-sub-color);
+    padding: 10px;
+}
+
+#entryHolder {
+    padding: 20px;
+}
+
+#date::before {
+    content: "Date: ";
+}
+
+#temp::before {
+    content: "Temp: ";
+}
+
+#content::before {
+    content: "Content:  ";
+}

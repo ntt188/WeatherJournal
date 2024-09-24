@@ -1,0 +1,8 @@
+# Node modules directory containing installed packages via npm
+node_modules/
+
+# Lockfiles (depending on the package manager you use)
+package-lock.json
+
+# Ignore macOS system files
+.DS_Store
